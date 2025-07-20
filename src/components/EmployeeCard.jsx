@@ -1,6 +1,9 @@
-import React from 'react';
+'use client';
 
-const EmployeeCard = ({ user, onView, onBookmark, onPromote }) => {
+import React from 'react';
+import Link from 'next/link';
+
+const EmployeeCard = ({ user, onBookmark, onPromote }) => {
   return (
     <div className="bg-white shadow p-4 rounded-md border mb-4">
       <h2 className="text-lg font-semibold">{user.fullName}</h2>
@@ -9,12 +12,12 @@ const EmployeeCard = ({ user, onView, onBookmark, onPromote }) => {
       <p className="text-sm">Department: {user.department}</p>
 
       <div className="flex gap-2 mt-3">
-        <button
-          onClick={onView}
-          className="px-2 py-1 bg-blue-500 text-white rounded text-sm"
+        <Link
+          href={`/employee/${user.id || user._id}`}
+          className="px-2 py-1 bg-blue-500 text-white rounded text-sm text-center"
         >
           View
-        </button>
+        </Link>
         <button
           onClick={onBookmark}
           className="px-2 py-1 bg-green-500 text-white rounded text-sm"
