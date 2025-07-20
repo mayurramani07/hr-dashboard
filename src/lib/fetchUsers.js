@@ -10,7 +10,6 @@ export async function fetchUsers() {
     email: user.email,
     age: user.age,
     department: departments[Math.floor(Math.random() * departments.length)],
-    performanceRating: Math.floor(Math.random() * 5) + 1,
   }));
 
   return users;
