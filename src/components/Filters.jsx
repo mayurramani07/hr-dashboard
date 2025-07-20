@@ -6,9 +6,16 @@ export default function Filters({ search, setSearch, filters, setFilters }) {
 
   const handleMultiSelect = (value, category) => {
     setFilters(prev => {
-      const current = new Set(prev[category]);
-      current.has(value) ? current.delete(value) : current.add(value);
-      return { ...prev, [category]: Array.from(current) };
+      const updatedSet = new Set(prev[category]);
+      if (updatedSet.has(value)) {
+        updatedSet.delete(value);
+      } else {
+        updatedSet.add(value);
+      }
+      return {
+        ...prev,
+        [category]: Array.from(updatedSet)
+      };
     });
   };
 
@@ -26,19 +33,20 @@ export default function Filters({ search, setSearch, filters, setFilters }) {
         <div>
           <label className="font-medium">Department</label>
           <div className="flex gap-2 flex-wrap mt-1">
-            {departments.map(dept => (
-              <button
-                key={dept}
-                className={`px-3 py-1 border rounded-full ${
-                  filters.department.includes(dept)
-                    ? 'bg-blue-500 text-white'
-                    : ''
-                }`}
-                onClick={() => handleMultiSelect(dept, 'department')}
-              >
-                {dept}
-              </button>
-            ))}
+            {departments.map(dept => {
+              const isSelected = filters.department.includes(dept);
+              return (
+                <button
+                  key={dept}
+                  onClick={() => handleMultiSelect(dept, 'department')}
+                  className={`px-3 py-1 border rounded-full ${
+                    isSelected ? 'bg-blue-500 text-white' : ''
+                  }`}
+                >
+                  {dept}
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>
