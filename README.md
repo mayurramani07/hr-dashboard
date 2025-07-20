@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# HR Dashboard
 
-## Getting Started
+A modern, responsive HR Dashboard built using **Next.js App Router**, **Tailwind CSS**, **Context API**, and **custom React hooks**. It provides a searchable, filterable, paginated list of employees with clean UI and modular component-based architecture. Visual insights are presented using **Chart.js**.
 
-First, run the development server:
+---
+
+## Features
+
+-  **Search & Filter Employees** by name, email, or department  
+-  **Department-wise Filtering** with multi-select checkboxes  
+-  **Employee Statistics & Charts** using Chart.js  
+-  **Pagination / Load More** to view more employees  
+-  **Fully Responsive** layout for all screen sizes  
+-  **Reusable React Components** and **Hooks**  
+-  **Global State Management** using Context API  
+
+---
+
+
+---
+
+##  Tech Stack
+
+- **React (with Next.js App Router)**
+- **Tailwind CSS**
+- **JavaScript (ES6+)**
+- **State Management:** Context API  
+- **Charts & Graphs:** Chart.js  
+- **Custom Hooks & Modular Components**
+
+---
+
+##  How to Run Locally
 
 ```bash
+# 1. Clone the repo
+git clone https://github.com/mayurramani07/hr-dashboard.git
+cd hr-dashboard
+
+# 2. Install dependencies
+npm install
+
+# 3. Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
