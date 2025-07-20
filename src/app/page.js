@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { fetchUsers } from '../lib/fetchUsers';
 import Filters from '../components/Filters';
 import EmployeeCard from '../components/EmployeeCard';
-import useFilteredUsers from '../hooks/useFilteredUsers';
+import useFilteredUsers from '../hooks/UseFilteredUsers';
 import Navbar from '../components/Navbar';
 
 export default function HomePage() {

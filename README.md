@@ -16,9 +16,6 @@ A modern, responsive HR Dashboard built using **Next.js App Router**, **Tailwind
 
 ---
 
-
----
-
 ##  Tech Stack
 
 - **React (with Next.js App Router)**
